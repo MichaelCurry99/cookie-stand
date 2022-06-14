@@ -337,7 +337,7 @@ for(i=0; i < hours.length; i++){
     // create a list element
     let li = document.createElement('li'); // create a li item
 
-    li.textContent = `${hours[i]}`;
+    li.textContent = `${hours[i]} ${this.push}`;
     
 
     // append list to ul
