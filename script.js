@@ -1,4 +1,4 @@
-// add comments to the lines of customers per hour and cookies per hour.
+  // add comments to the lines of customers per hour and cookies per hour.
 // Use the same code in about me to code totalDailyCookies. Ex: you have this totalDailyCookies.
 
 const hours = ['7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']; //hours set here
