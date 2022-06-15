@@ -53,11 +53,12 @@ for(i=0; i < hours.length; i++){
 }
 let h2 = document.createElement('h2');
 h2.textContent = `${this.cityName}`;
+
 cookieContainer.append(h2);
 cookieContainer.append(ul); // adding our ul to our div
 }
 
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -133,7 +134,7 @@ cookieContainer.append(h2);
 cookieContainer.append(ul); // adding our ul to our div
 }
 
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -211,7 +212,7 @@ cookieContainer.append(h2);
 cookieContainer.append(ul); // adding our ul to our div
 }
 
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -328,30 +329,67 @@ let lima = {
 // let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
 
 
-
 function render(hours) {
-    let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
-    let ul = document.createElement('ul'); //unordered list
-// rendering the hours 
+     // this is where my div container is
+    // let ul = document.createElement('ul');
+     //unordered list
+    // rendering the hours 
+let cookieContainer = document.getElementById('table-element');
+
 for(i=0; i < hours.length; i++){
     // create a list element
-    let li = document.createElement('li'); // create a li item
+    let th = document.createElement('th'); // create a li item
 
-    li.textContent = `${hours[i]} ${this.push}`;
+    th.textContent = `${hours[i]}`;
     
 
     // append list to ul
-    ul.append(li);
+    cookieContainer.append(th);
 
 }
 
-let h2 = document.createElement('h5');
-h2.textContent = this.cityName =`${'Lima'}`;
-cookieContainer.append(h2);
-cookieContainer.append(ul); // adding our ul to our div
+function renderCookieData(cookiedata){
+    // We need the reference to our table element
+ let cookieContainer = document.getElementById('table-element'); // table element is stored here
+    // We need to create a table row element
+let tr = document.createElement('tr');
+    // We need to create a table data element
+    // We need to loop through our cookie data
+for(i=0; i < cookiedata.length; i++){
+    // We need to add the cookie data to our td element
+let td = document.createElement('td');
+
+    td.textContent = `${cookiedata[i]}`; //makes text show on browser NOT RENDERED YET
+
+    // We need to attach our td element to our tr element
+    
+
+    // We need to attach our tr element to our cookie container element
+    tr.append(td); // attaching towards the table data ('td') to table row ('tr')
+
+}
+    cookieContainer.append(tr); // attaching towards the cookiedata to table row ('tr')
+
+    
+    
+    // Look at the results on browser!
+    
+}
+renderCookieData(seattle.cookiesPerHour);
+renderCookieData(tokyo.cookiesPerHour);
+renderCookieData(dubai.cookiesPerHour);
+renderCookieData(lima.cookiesPerHour);
+renderCookieData(paris.cookiesPerHour);
+
+// call our renderCookieData function!
+
+//let h2 = document.createElement('h5');
+//h2.textContent = this.cityName =`${'Lima'}`;
+//cookieContainer.append(h2);
+//cookieContainer.append(ul); // adding our ul to our div
 }
 
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
