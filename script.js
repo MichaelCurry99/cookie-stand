@@ -44,7 +44,7 @@ for(i=0; i < hours.length; i++){
     // create a list element
     let li = document.createElement('li'); // crate a li item
 
-    li.textContent = `${hours[i]} cookies go here`;
+     li.textContent = `${hours[i]} ${this.hours}`;
     
 
     // append list to ul
@@ -206,7 +206,7 @@ for(i=0; i < hours.length; i++){
 }
 
 let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName}`;
+h2.textContent = `${this.cityName = 'Dubai'}`;
 cookieContainer.append(h2);
 cookieContainer.append(ul); // adding our ul to our div
 }
@@ -221,7 +221,7 @@ dubai.calcustomersPerHour();
 dubai.calCookiesPerHour();
 
 let paris = {
-    cityName: 'Paris',
+    cityName4: 'Paris',
     maxCustomers:38,
     minCustomers:20,
     avgeCookie: 2.3,
@@ -275,9 +275,9 @@ for(i=0; i < hours.length; i++){
 
 }
 
-let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName}`;
-cookieContainer.append(h2);
+let h4 = document.createElement('h4');
+h4.textContent = this.cityName =`${'Paris'}`;
+cookieContainer.append(h4);
 cookieContainer.append(ul); // adding our ul to our div
 }
 
@@ -337,7 +337,7 @@ for(i=0; i < hours.length; i++){
     // create a list element
     let li = document.createElement('li'); // create a li item
 
-    li.textContent = `${hours[i]}`;
+    li.textContent = `${hours[i]} ${this.push}`;
     
 
     // append list to ul
@@ -345,8 +345,8 @@ for(i=0; i < hours.length; i++){
 
 }
 
-let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName}`;
+let h2 = document.createElement('h5');
+h2.textContent = this.cityName =`${'Lima'}`;
 cookieContainer.append(h2);
 cookieContainer.append(ul); // adding our ul to our div
 }
