@@ -1,4 +1,4 @@
-       // add comments to the lines of customers per hour and cookies per hour.
+  // add comments to the lines of customers per hour and cookies per hour.
 // Use the same code in about me to code totalDailyCookies. Ex: you have this totalDailyCookies.
 
 const hours = ['7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']; //hours set here
@@ -38,26 +38,7 @@ let seattle = {
 
 // console.log(Math.random(seattle.maxCustomers * seattle.minCustomers));
 
-function render(hours) {
-// rendering the hours 
-for(i=0; i < hours.length; i++){
-    // create a list element
-    let li = document.createElement('li'); // crate a li item
-
-     li.textContent = `${hours[i]} ${this.hours}`;
-    
-
-    // append list to ul
-    ul.append(li);
-
-}
-let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName}`;
-cookieContainer.append(h2);
-cookieContainer.append(ul); // adding our ul to our div
-}
-
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -110,30 +91,7 @@ let tokyo = {
 // let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
 
 
-
-function render(hours) {
-    let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
-    let ul = document.createElement('ul'); //unordered list
-// rendering the hours 
-for(i=0; i < hours.length; i++){
-    // create a list element
-    let li = document.createElement('li'); // crate a li item
-
-    li.textContent = `${hours[i]} ${this.length}`;
-    
-
-    // append list to ul
-    ul.append(li);
-
-}
-
-let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName}`;
-cookieContainer.append(h2);
-cookieContainer.append(ul); // adding our ul to our div
-}
-
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -169,9 +127,7 @@ let dubai = {
     },
 
     calCookiesPerHour: function(){
-        // calculate cookies per hour
-        // let result = this.customersPerHour[0]  * this.avgeCookie
-        // console.log(result);
+
 
         for(i=0; i < this.customersPerHour.length; i++){ 
 
@@ -189,29 +145,9 @@ let dubai = {
 
 
 
-function render(hours) {
-    let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
-    let ul = document.createElement('ul'); //unordered list
-// rendering the hours 
-for(i=0; i < hours.length; i++){
-    // create a list element
-    let li = document.createElement('li'); // create a li item
 
-    li.textContent = `${hours[i]} `;
-    
 
-    // append list to ul
-    ul.append(li);
-
-}
-
-let h2 = document.createElement('h2');
-h2.textContent = `${this.cityName = 'Dubai'}`;
-cookieContainer.append(h2);
-cookieContainer.append(ul); // adding our ul to our div
-}
-
-render(hours); //call our function!
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
@@ -259,43 +195,23 @@ let paris = {
 
 
 
-function render(hours) {
-    let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
-    let ul = document.createElement('ul'); //unordered list
-// rendering the hours 
-for(i=0; i < hours.length; i++){
-    // create a list element
-    let li = document.createElement('li'); // create a li item
 
-    li.textContent = `${hours[i]}`;
-    
+paris.calcustomersPerHour();
+paris.calCookiesPerHour();
 
-    // append list to ul
-    ul.append(li);
-
-}
-
-let h4 = document.createElement('h4');
-h4.textContent = this.cityName =`${'Paris'}`;
-cookieContainer.append(h4);
-cookieContainer.append(ul); // adding our ul to our div
-}
-
-render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
 // let result = seattle.customersPerHour[0] * seattle.avgeCookie;
 // console.log(result);
-paris.calcustomersPerHour();
-paris.calCookiesPerHour();
+
 
 let lima = {
     cityName: 'Lima',
     maxCustomers:16,
     minCustomers:2,
     avgeCookie: 4.6,
-    cookiesPerHour: [],
+    cookiesPerHour: [], // this is where the code is stored
     customersPerHour: [],
     totalDailyCookies: 0,
 
@@ -316,46 +232,84 @@ let lima = {
         for(i=0; i < this.customersPerHour.length; i++){ 
 
             this.cookiesPerHour.push(Math.ceil(this.customersPerHour[i] * this.avgeCookie));
+// console.log(lima.cookiesPerHour);
+
         }
-        console.log(this.cookiesPerHour);
+        
     },
 
 }
-
+lima.calcustomersPerHour();
+lima.calCookiesPerHour();
 
 // console.log(Math.random(seattle.maxCustomers * seattle.minCustomers));
 
 // let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
 
-
-
 function render(hours) {
-    let cookieContainer = document.getElementById('cookies-sold'); // this is where my div container is
-    let ul = document.createElement('ul'); //unordered list
-// rendering the hours 
+     // this is where my div container is
+    // let ul = document.createElement('ul');
+     //unordered list
+    // rendering the hours 
+let cookieContainer = document.getElementById('table-element');
+
 for(i=0; i < hours.length; i++){
     // create a list element
-    let li = document.createElement('li'); // create a li item
+    let th = document.createElement('th'); // create a li item
 
-    li.textContent = `${hours[i]} ${this.push}`;
+    th.textContent = `${hours[i]}`;
     
 
     // append list to ul
-    ul.append(li);
+    cookieContainer.append(th);
 
 }
 
-let h2 = document.createElement('h5');
-h2.textContent = this.cityName =`${'Lima'}`;
-cookieContainer.append(h2);
-cookieContainer.append(ul); // adding our ul to our div
+// renderCookieData() DO NOT CALL A FUNCTION BEFORE IT IS MADE
+function renderCookieData(cookiedata){
+    // We need the reference to our table element
+ let cookieContainer = document.getElementById('table-element'); // table element is stored here
+    // We need to create a table row element
+let tr = document.createElement('tr');
+    // We need to create a table data element
+    // We need to loop through our cookie data
+for(i=0; i < cookiedata.length; i++){  // helps to iterate the data in cookie data
+    // We need to add the cookie data to our td element
+let td = document.createElement('td');
+
+    td.textContent = `${cookiedata[i]}`; //makes text show on browser NOT RENDERED YET
+
+    // We need to attach our td element to our tr element
+    
+
+    // We need to attach our tr element to our cookie container element
+    tr.append(td); // attaching towards the table data ('td') to table row ('tr')
+
+}
+    cookieContainer.append(tr); // attaching towards the cookiedata to table row ('tr')
+
 }
 
-render(hours); //call our function!
+
+renderCookieData(seattle.cookiesPerHour);
+renderCookieData(tokyo.cookiesPerHour);
+renderCookieData(dubai.cookiesPerHour);
+renderCookieData(paris.cookiesPerHour);
+
+renderCookieData(lima.cookiesPerHour);
+
+// call our renderCookieData function!
+
+//let h2 = document.createElement('h5');
+//h2.textContent = this.cityName =`${'Lima'}`;
+//cookieContainer.append(h2);
+//cookieContainer.append(ul); // adding our ul to our div
+}
+
+// render(hours); //call our function!
 
 // seattle.calcustomersPerHour();
 
 // let result = seattle.customersPerHour[0] * seattle.avgeCookie;
 // console.log(result);
-lima.calcustomersPerHour();
-lima.calCookiesPerHour();
+render(hours); //call our function!
